@@ -46,7 +46,7 @@ class HeapPriorityQueue(PriorityQueueBase):
         if len(self) == 0:
             return
 
-        ind = (self.__data.index(self.__data[i]) - 1) // 2
+        ind = (i-1) // 2
 
         if 0 <= ind < len(self):
             return ind
@@ -57,7 +57,7 @@ class HeapPriorityQueue(PriorityQueueBase):
         if len(self) == 0:
             return
 
-        ind = (2*self.__data.index(self.__data[i])) + 1
+        ind = (2*i) + 1
 
         if 0 <= ind < len(self):
             return ind
@@ -68,7 +68,7 @@ class HeapPriorityQueue(PriorityQueueBase):
         if len(self) == 0:
             return
 
-        ind = (2*self.__data.index(self.__data[i])) + 2
+        ind = (2*i) + 2
 
         if 0 <= ind < len(self):
             return ind
